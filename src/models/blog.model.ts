@@ -4,6 +4,7 @@ import { IBlog } from '../store/interfaces/blog.interface';
 export interface IBlogModel extends Model<IBlog>{
   createBlog(data:IBlog):Promise<IBlog>;
 }
+
 const blogSchema = new Schema({
   title: { 
     type: String, 
