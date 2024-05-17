@@ -2,7 +2,7 @@ import express, { Application, NextFunction, Request, Response } from 'express';
 import router from './routes/main.route';
 import mongoose from 'mongoose';
 
-class BackendServer {
+class App {
   private app: Application;
 
   constructor() {
@@ -48,6 +48,6 @@ class BackendServer {
   }
 }
 
-const server = new BackendServer();
+const server = new App();
 const PORT = Number(process.env.PORT) || 3000;
 server.start(PORT);
